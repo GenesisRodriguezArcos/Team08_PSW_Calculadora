@@ -266,8 +266,8 @@ Tres corridas obligatorias para comprobar que **avisa tanto el éxito como el fa
 |---|---|
 | **Christopher Lucas Leyva Chumpitaz** | Fase 2 · Jenkins, pipeline, JaCoCo y notificaciones a Slack |
 | **Genesis de los Ángeles Rodríguez Arcos** | Fase 1 · proyecto Java, operaciones y 87 pruebas JUnit |
-| **Carlos Andres Guerrero Almeyda** | Integrante |
-| **María Nayeli Madeleine Ávila Conde** | Integrante |
+| **Carlos Andres Guerrero Almeyda** | No asistieron / No formaron parte de esta actividad |
+| **María Nayeli Madeleine Ávila Conde** | No asistieron / No formaron parte de esta actividad |
 
 **Tutora:** Valery Giselle Chumpitaz Caycho · **Módulo:** Soporte Técnico y Ofimática · **Cañete, Perú — Septiembre 2026**
 

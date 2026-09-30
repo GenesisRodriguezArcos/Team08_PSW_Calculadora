@@ -78,7 +78,7 @@ def notificarSlack(String estado, String color, String emoji) {
     def pruebas = resumenDePruebas()
     def cobertura = coberturaDeCodigo()
     echo "Notificacion Slack -> ${estado} | pruebas: ${pruebas} | cobertura: ${cobertura} | canal: ${env.CANAL}"
-    def aviso = "Build ${estado}: ${env.JOB_NAME} #${env.BUILD_NUMBER} ${env.BUILD_URL}"
+    def aviso = "Build ${estado}: ${env.JOB_NAME} #${env.BUILD_NUMBER} | ${currentBuild.durationString} | ${env.BUILD_URL}"
     def encabezado = "${emoji} *Build ${estado}*  |  `${env.JOB_NAME}` *#${env.BUILD_NUMBER}*"
 
     def campos = [

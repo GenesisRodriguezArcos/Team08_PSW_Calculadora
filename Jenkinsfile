@@ -59,15 +59,15 @@ def coberturaDeCodigo() {
         for (int i = 1; i < lineas.length; i++) {
             def columnas = lineas[i].split(',')
             if (columnas.length > 8) {
-                perdidas += Long.parseLong(columnas[7].trim())
-                cubiertas += Long.parseLong(columnas[8].trim())
+                perdidas += Integer.parseInt(columnas[7].trim())
+                cubiertas += Integer.parseInt(columnas[8].trim())
             }
         }
         long total = cubiertas + perdidas
         if (total == 0) {
             return 'Sin datos'
         }
-        int porcentaje = (int) Math.round(cubiertas * 100.0 / total)
+        int porcentaje = (int) (cubiertas * 100.0 / total + 0.5)
         return "${porcentaje}% lineas (${cubiertas}/${total})"
     } catch (Exception e) {
         return 'Sin datos'
@@ -77,6 +77,7 @@ def coberturaDeCodigo() {
 def notificarSlack(String estado, String color, String emoji) {
     def pruebas = resumenDePruebas()
     def cobertura = coberturaDeCodigo()
+    echo "Notificacion Slack -> ${estado} | pruebas: ${pruebas} | cobertura: ${cobertura} | canal: ${env.CANAL}"
     def aviso = "Build ${estado}: ${env.JOB_NAME} #${env.BUILD_NUMBER} ${env.BUILD_URL}"
     def encabezado = "${emoji} *Build ${estado}*  |  `${env.JOB_NAME}` *#${env.BUILD_NUMBER}*"
 

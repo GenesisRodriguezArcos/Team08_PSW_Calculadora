@@ -26,7 +26,7 @@ class CalculadoraTest {
     @Test
     @DisplayName("Prueba de suma: números positivos")
     void testSumarPositivos() {
-        assertEquals(8.0, calc.sumar(5, 3), 0.001);
+        assertEquals(999.0, calc.sumar(5, 3), 0.001);
     }
 
     @Test
